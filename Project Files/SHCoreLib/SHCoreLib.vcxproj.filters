@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\SHCoreLib\SHCoreLib.cpp" />
+    <ClCompile Include="..\..\Source\SHCoreLib\RenderSystem\D3D11\SHD3D11RenderWindow.cpp">
+      <Filter>RenderSystem\D3D11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SHCoreLib\RenderSystem\SHRenderWindow.cpp">
+      <Filter>RenderSystem</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\SHCoreLib\SHCoreLib.h" />
+    <ClInclude Include="SHTypes.h" />
+    <ClInclude Include="..\..\Source\SHCoreLib\SHCore.h" />
+    <ClInclude Include="..\..\Source\SHCoreLib\SHCoreMinimal.h" />
+    <ClInclude Include="..\..\Source\SHCoreLib\SHUtilities.h" />
+    <ClInclude Include="..\..\Source\SHCoreLib\SHPreDefine.h" />
+    <ClInclude Include="..\..\Source\SHCoreLib\RenderSystem\SHRenderWindow.h">
+      <Filter>RenderSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\SHCoreLib\RenderSystem\D3D11\SHD3D11RenderWindow.h">
+      <Filter>RenderSystem\D3D11</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="RenderSystem">
+      <UniqueIdentifier>{bf7dd98d-1f5d-4162-be33-75cebbb909a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Memory">
+      <UniqueIdentifier>{c09a746d-f5bb-47e5-a2f7-86bae73cc13d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Math">
+      <UniqueIdentifier>{7c90bebf-caa1-49b9-a4df-6d6c7a7f8242}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Log">
+      <UniqueIdentifier>{00dd2399-13a3-4e12-a360-cb47d69267d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RenderSystem\D3D11">
+      <UniqueIdentifier>{e6502f01-8924-488d-b6ee-132f35baacea}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

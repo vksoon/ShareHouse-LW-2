@@ -43,6 +43,9 @@ bld/
 [Oo]bj/
 build/
 
+# ShareHouse
+Intermediate/
+
 # Roslyn cache directories
 *.ide/
 .vs/
