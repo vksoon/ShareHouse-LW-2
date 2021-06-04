@@ -29,3 +29,13 @@
 #include <functional>
 #include <limits>
 #include <iterator>
+
+#define SAFE_DELETE(object)		\
+	if(object)					\
+		delete object;			\
+	object = nullptr			
+
+#define SAFE_RELEASE(object)	\
+	if(object)					\
+		object->Release();		\
+	object = nullptr			

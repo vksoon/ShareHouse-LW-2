@@ -8,10 +8,18 @@
     <ClCompile Include="..\..\Source\SHCoreLib\RenderSystem\SHRenderWindow.cpp">
       <Filter>RenderSystem</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\SHCoreLib\Math\SHVector.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SHCoreLib\Math\SHMatrix.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SHCoreLib\RenderSystem\D3D11\SHD3D11Device.cpp">
+      <Filter>RenderSystem\D3D11</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Source\SHCoreLib\SHCoreLib.h" />
-    <ClInclude Include="SHTypes.h" />
     <ClInclude Include="..\..\Source\SHCoreLib\SHCore.h" />
     <ClInclude Include="..\..\Source\SHCoreLib\SHCoreMinimal.h" />
     <ClInclude Include="..\..\Source\SHCoreLib\SHUtilities.h" />
@@ -20,6 +28,19 @@
       <Filter>RenderSystem</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\SHCoreLib\RenderSystem\D3D11\SHD3D11RenderWindow.h">
+      <Filter>RenderSystem\D3D11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\SHCoreLib\Math\SHVector.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\SHCoreLib\Math\SHMatrix.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\SHCoreLib\SHTypes.h" />
+    <ClInclude Include="..\..\Source\SHCoreLib\RenderSystem\D3D11\SHD3D11Device.h">
+      <Filter>RenderSystem\D3D11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\SHCoreLib\RenderSystem\D3D11\SHD3D11Define.h">
       <Filter>RenderSystem\D3D11</Filter>
     </ClInclude>
   </ItemGroup>
@@ -38,6 +59,9 @@
     </Filter>
     <Filter Include="RenderSystem\D3D11">
       <UniqueIdentifier>{e6502f01-8924-488d-b6ee-132f35baacea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource">
+      <UniqueIdentifier>{bae736ac-fbca-4193-b7c6-1fb89e84c74a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

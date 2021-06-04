@@ -8,15 +8,7 @@ using namespace SHCore;
 
 int main()
 {
-	//auto renderWindowOption = SHRenderWindow::CreateRenderWindowOption(SHRenderWindow::EWindowMode::Window, 1280, 720, 0, 0, "ShareHouseLiteEngine");
-
-	SHRenderWindow::FRenderWindowOption renderWindowOption = 
-	{
-		SHRenderWindow::EWindowMode::Window,
-		1280, 720,
-		0, 0,
-		"ShareHouseLiteEngine"
-	};
+	FRenderWindowOption renderWindowOption = SHRenderWindow::CreateRenderWindowOption(EWindowMode::Window, 1280, 720, 0, 0, "ShareHouseLiteEngine");
 
 	SHRenderWindow* renderWindow = new SHD3D11RenderWindow();
 	renderWindow->Create(renderWindowOption);

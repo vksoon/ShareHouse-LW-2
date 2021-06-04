@@ -21,8 +21,8 @@ namespace SHCore
 	private:
 		static LRESULT WINAPI MsgProc(HWND inHWND, UINT inMSG, WPARAM inWPARAM, LPARAM inLPARAM);
 
-		HINSTANCE hInstance;
-		HWND hWnd;
-		MSG Msg;
+		HINSTANCE m_Instance;
+		HWND m_Wnd;
+		MSG m_Msg;
 	};
 }

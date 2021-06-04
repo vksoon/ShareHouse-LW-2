@@ -19,19 +19,26 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\SHCoreLib\Math\SHMatrix.cpp" />
+    <ClCompile Include="..\..\Source\SHCoreLib\Math\SHVector.cpp" />
+    <ClCompile Include="..\..\Source\SHCoreLib\RenderSystem\D3D11\SHD3D11Device.cpp" />
     <ClCompile Include="..\..\Source\SHCoreLib\RenderSystem\D3D11\SHD3D11RenderWindow.cpp" />
     <ClCompile Include="..\..\Source\SHCoreLib\RenderSystem\SHRenderWindow.cpp" />
     <ClCompile Include="..\..\Source\SHCoreLib\SHCoreLib.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Source\SHCoreLib\Math\SHMatrix.h" />
+    <ClInclude Include="..\..\Source\SHCoreLib\Math\SHVector.h" />
+    <ClInclude Include="..\..\Source\SHCoreLib\RenderSystem\D3D11\SHD3D11Define.h" />
+    <ClInclude Include="..\..\Source\SHCoreLib\RenderSystem\D3D11\SHD3D11Device.h" />
     <ClInclude Include="..\..\Source\SHCoreLib\RenderSystem\D3D11\SHD3D11RenderWindow.h" />
     <ClInclude Include="..\..\Source\SHCoreLib\RenderSystem\SHRenderWindow.h" />
     <ClInclude Include="..\..\Source\SHCoreLib\SHCore.h" />
     <ClInclude Include="..\..\Source\SHCoreLib\SHCoreLib.h" />
     <ClInclude Include="..\..\Source\SHCoreLib\SHCoreMinimal.h" />
     <ClInclude Include="..\..\Source\SHCoreLib\SHPreDefine.h" />
+    <ClInclude Include="..\..\Source\SHCoreLib\SHTypes.h" />
     <ClInclude Include="..\..\Source\SHCoreLib\SHUtilities.h" />
-    <ClInclude Include="SHTypes.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

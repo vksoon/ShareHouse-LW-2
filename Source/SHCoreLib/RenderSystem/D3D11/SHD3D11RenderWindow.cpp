@@ -4,10 +4,10 @@ using namespace SHCore;
 
 SHD3D11RenderWindow::SHD3D11RenderWindow()
 {
-	hInstance = nullptr;
-	hWnd = nullptr;
+	m_Instance = nullptr;
+	m_Wnd = nullptr;
 
-	ZeroMemory(&Msg, sizeof(Msg));
+	ZeroMemory(&m_Msg, sizeof(m_Msg));
 }
 
 SHD3D11RenderWindow::~SHD3D11RenderWindow()
@@ -17,9 +17,9 @@ SHD3D11RenderWindow::~SHD3D11RenderWindow()
 
 bool SHD3D11RenderWindow::Create(const FRenderWindowOption& inRenderWindowOption)
 {
-	RenderWindowOption = inRenderWindowOption;
+	m_RenderWindowOption = inRenderWindowOption;
 
-	const char* windowTitleStr = RenderWindowOption.GetWindowTitle().c_str();
+	const char* windowTitleStr = m_RenderWindowOption.GetWindowTitle().c_str();
 
 	WNDCLASSEX wc =
 	{
@@ -29,26 +29,26 @@ bool SHD3D11RenderWindow::Create(const FRenderWindowOption& inRenderWindowOption
 	};
 	RegisterClassEx(&wc);
 
-	hInstance = wc.hInstance;
-	hWnd = CreateWindowA(windowTitleStr, windowTitleStr,
-		WS_OVERLAPPEDWINDOW, RenderWindowOption.GetPosX(), RenderWindowOption.GetPosY(), RenderWindowOption.GetWidth(), RenderWindowOption.GetHeight(),
-		NULL, NULL, hInstance, NULL);
+	m_Instance = wc.hInstance;
+	m_Wnd = CreateWindowA(windowTitleStr, windowTitleStr,
+		WS_OVERLAPPEDWINDOW, m_RenderWindowOption.GetPosX(), m_RenderWindowOption.GetPosY(), m_RenderWindowOption.GetWidth(), m_RenderWindowOption.GetHeight(),
+		NULL, NULL, m_Instance, NULL);
 
-	ShowWindow(hWnd, SW_SHOWDEFAULT);
-	UpdateWindow(hWnd);
+	ShowWindow(m_Wnd, SW_SHOWDEFAULT);
+	UpdateWindow(m_Wnd);
 
 	return true;
 }
 
 bool SHD3D11RenderWindow::Show()
 {
-	if (Msg.message == WM_QUIT)
+	if (m_Msg.message == WM_QUIT)
 		return false;
 
-	if (PeekMessage(&Msg, NULL, 0, 0, PM_REMOVE))
+	if (PeekMessage(&m_Msg, NULL, 0, 0, PM_REMOVE))
 	{
-		TranslateMessage(&Msg);
-		DispatchMessage(&Msg);
+		TranslateMessage(&m_Msg);
+		DispatchMessage(&m_Msg);
 	}
 
 	return true;
@@ -56,8 +56,8 @@ bool SHD3D11RenderWindow::Show()
 
 void SHD3D11RenderWindow::Destroy()
 {
-	DestroyWindow(hWnd);
-	UnregisterClass(RenderWindowOption.GetWindowTitle().c_str(), hInstance);
+	DestroyWindow(m_Wnd);
+	UnregisterClass(m_RenderWindowOption.GetWindowTitle().c_str(), m_Instance);
 }
 
 LRESULT WINAPI SHD3D11RenderWindow::MsgProc(HWND inHWND, UINT inMSG, WPARAM inWPARAM, LPARAM inLPARAM)
